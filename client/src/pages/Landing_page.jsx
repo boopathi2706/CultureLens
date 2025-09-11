@@ -12,7 +12,7 @@ const Landing_page = () => {
          </div>
         <div>
           <h1 className='text-red font-bold text-[1.5rem] ml-4 '>Culture Lens</h1>
-          <h1 className='text-red font-bold text-[12px] ml-4 text-center'>About Sikkim Temple's</h1>
+          <h1 className='text-red  text-[12px] ml-4 text-center'>About Sikkim Monasteries</h1>
         </div>
       </div>
 
