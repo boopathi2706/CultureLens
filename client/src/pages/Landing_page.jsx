@@ -1,6 +1,8 @@
 import React from 'react'
 
+
 const Landing_page = () => {
+
   return (
     <div className="h-[410vh] w-full flex flex-col justify-start items-start">
 
@@ -25,7 +27,7 @@ const Landing_page = () => {
             <li className='cursor-pointer'><a href="">Contact us</a></li>
          </ul>
      </div>
-     <button className=' w-[10%] h-[60%] bg-black text-white px-4 py-2 rounded-md hover:bg-gray-700 transition-all duration-300 ease-in-out'>Visit</button>
+     <button className=' w-[10%] h-[60%] bg-black text-white px-4 py-2 rounded-md hover:bg-gray-700 transition-all duration-300 ease-in-out' >Visit</button>
 
   </div>
 

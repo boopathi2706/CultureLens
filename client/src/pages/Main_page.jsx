@@ -1,6 +1,9 @@
 import React from 'react'
 
+
+
 const Main_page = () => {
+  
   return (
     <div className='h-[330vh] w-full flex flex-col justify-start items-start'>
         
@@ -73,7 +76,7 @@ const Main_page = () => {
          <h1 className='text-[2rem] font-bold text-purple-600'>Event Calender</h1>
          <p className='w-[30vw] text-center mt-[-20px]'>The Cultural Calendar helps tourists and locals stay updated about monastery festivals, rituals, and events. It makes planning visits easier and promotes Sikkim’s cultural heritage.</p>
          <div className='w-[90%] h-[50%] bg-[url("/cal.jpg")] bg-cover bg-center'></div>
-         <button className='w-[60%] h-[10%] bg-yellow-300 cursor-pointer rounded-[50px] text-[1.1rem]'>View More Events</button>
+         <button className='w-[60%] h-[10%] bg-yellow-300 cursor-pointer rounded-[50px] text-[1.1rem]' >View More Events</button>
     </div>
 
 
