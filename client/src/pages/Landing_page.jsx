@@ -1,7 +1,18 @@
 import React from 'react'
-
+import { useNavigate } from "react-router-dom";
 
 const Landing_page = () => {
+  const navigate = useNavigate();
+  const goToCalendar = () => {
+    navigate("/calendar"); // navigates to /about
+  };
+   const goToMonasteries = () => {
+    navigate("/monasteries"); // navigates to /about
+  };
+ const goToMain = () => {
+    navigate("/main"); // navigates to /about
+  };
+
 
   return (
     <div className="h-[410vh] w-full flex flex-col justify-start items-start">
@@ -20,26 +31,26 @@ const Landing_page = () => {
 
      <div className='w-[50%] h-[90%] bg-white flex flex-row items-center justify-between'>
          <ul className='w-full h-[90%] bg-white flex flex-row items-center justify-evenly list-none text-[1.1rem]'>
-            <li className='cursor-pointer'><a href="">Home</a></li>
-            <li className='cursor-pointer'><a href="">About Application</a></li>
-            <li className='cursor-pointer'><a href="">Feature</a></li>
-            <li className='cursor-pointer'><a href="">Sikkim map</a></li>
-            <li className='cursor-pointer'><a href="">Contact us</a></li>
+            <li className='cursor-pointer'><a href="#home">Home</a></li>
+            <li className='cursor-pointer'><a href="#about">About Application</a></li>
+            <li className='cursor-pointer'><a href="#feature">Feature</a></li>
+            <li className='cursor-pointer'><a href="#map">Sikkim map</a></li>
+            <li className='cursor-pointer'><a href="#footer">Contact us</a></li>
          </ul>
      </div>
-     <button className=' w-[10%] h-[60%] bg-black text-white px-4 py-2 rounded-md hover:bg-gray-700 transition-all duration-300 ease-in-out' >Visit</button>
+     <button className=' w-[10%] h-[60%] bg-black text-white px-4 py-2 rounded-md hover:bg-gray-700 transition-all duration-300 ease-in-out cursor-pointer' onClick={goToMain}>Visit</button>
 
   </div>
 
 
 {/* first secotion */}
-  <div className="h-[100vh] bg-blue-300  w-full flex flex-row justify-center items-center">
+  <section id='home' className="h-[100vh] bg-blue-300  w-full flex flex-row justify-center items-center">
      <div className='w-[50%] h-[90%] bg-blue-300 flex flex-col items-start justify-center pl-6'>
        <h1 className='text-[2.5rem] w-[40vw] font-bold' >Experience Sikkim’s Monasteries Like Never Before</h1>
        <p className='w-[40vw]'>Discover 200+ Monasteries through 360° Virtual Tours, Interactive Maps, and Digital Archives – Anytime, Anywhere.</p>
         <div className='w-[55%] h-[8%] flex flex-row items-center justify-between mt-4'>
-          <button className='h-full w-[49%] rounded-[5px] bg-amber-500'>Start Your Virtual Tour</button>
-          <button className='h-full w-[49%] rounded-[5px] bg-amber-600'>Explore Cultural Events</button>
+          <button className='h-full w-[49%] rounded-[5px] bg-amber-500 cursor-pointer' onClick={goToMonasteries}>Start Your Virtual Tour</button>
+          <button className='h-full w-[49%] rounded-[5px] bg-amber-600 cursor-pointer' onClick={goToCalendar}>Explore Cultural Events</button>
         </div>
      </div>
      <div className='w-[50%] h-[90%] flex items-center justify-center '>
@@ -82,14 +93,14 @@ const Landing_page = () => {
         </div>
 
      </div>
-  </div>
+  </section>
 
 
 
 
 {/* second section */}
 
-  <div className="h-[90vh]   w-full flex flex-row justify-center items-center">
+  <section id='about' className="h-[90vh]   w-full flex flex-row justify-center items-center">
     
      <div className='w-[50%] h-[90%] relative'>
             <div className='w-[350px] h-[80%] bg-red-300 absolute top-[10%] left-[20%] rotate-345 flex items-center justify-center rounded-[5px]'>
@@ -108,12 +119,12 @@ const Landing_page = () => {
           CultureLens is a digital heritage platform that brings Sikkim’s centuries-old monasteries to life through immersive 360° virtual tours, interactive maps, and rich digital archives. Our goal is to make cultural treasures accessible to everyone, anytime, while preserving rare manuscripts, murals, and historical documents for future generations. With features like AI-powered search, cultural event calendars, and smart audio guides, CultureLens connects tourism, education, and technology to celebrate and protect Sikkim’s spiritual heritage.
          </p>
      </div>
-  </div>
+  </section>
 
 
 
 {/* feature */}
-   <div className="h-[90vh] bg-blue-300 w-full flex flex-row justify-center items-center">
+   <section id='feature' className="h-[90vh] bg-blue-300 w-full flex flex-row justify-center items-center">
     <div className='w-[60%] h-[100%] bg-blue-300 flex flex-col items-end justify-center gap-10 bg-[url("/f_img.png")] bg-cover bg-center'>
         <div className='w-[30%] h-[10%] bg-white mr-[20%] rounded-[30px] flex flex-row items-center justify-evenly'>
              <div className='w-[40px] h-[40px] rounded-[50%] bg-yellow-300 flex items-center justify-center'>1</div>
@@ -142,12 +153,12 @@ const Landing_page = () => {
            <div className='w-[250px] h-[140px] bg-[url("/airplane.png")] bg-cover bg-center absolute right-[20%] bottom-[75%] rotate-22'></div>
      </div>
 
-  </div>
+  </section>
 
 
 {/* map */}
 
-   <div className="h-[90vh] bg-white w-full flex flex-row justify-center items-center ">
+   <section id='map' className="h-[90vh] bg-white w-full flex flex-row justify-center items-center ">
        <div className='w-[80%] h-[90%] bg-white  flex flex-col justify-center items-center relative'>
            <div className='w-[550px] h-[550px] bg-[url("/sikkim_map.png")] bg-cover bg-top rounded-[50%]'>
            </div>
@@ -245,12 +256,12 @@ const Landing_page = () => {
         
      </div>
 
-  </div>
+  </section>
 
 
 
 {/* footer */}
-   <div className="h-[50vh] bg-blue-300 w-full flex flex-row items-center justify-evenly">
+   <section id='footer' className="h-[50vh] bg-blue-300 w-full flex flex-row items-center justify-evenly">
 
     <div className='w-[30%] h-[90%]  flex flex-col items-start justify-center gap-6'>
       <div className='w-[90%] h-[30%]  flex flex-row items-center justify-start bg-blue-300 gap-6'>
@@ -299,7 +310,7 @@ const Landing_page = () => {
       </div>
       <button className='w-[90%] h-[15%] bg-yellow-300 cursor-pointer rounded-[5px] text-[1.1rem]'>Submit Feedback</button>
     </div>
-  </div>
+  </section>
 </div>
 
   )
