@@ -1,8 +1,10 @@
 import React, { useState ,useEffect } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import clsx from "clsx";
+import { useNavigate } from "react-router-dom";
 
 const Calendar = () => {
+  const navigate=useNavigate();
   const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedEvent, setSelectedEvent] = useState(null); // store clicked event
@@ -10,7 +12,9 @@ const Calendar = () => {
   const [showFullText, setShowFullText] = useState(false);
   const startOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
   const endOfMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0);
-  
+  const gotoMain=()=>{
+    navigate("/main")
+  }
    useEffect(() => {
     setShowFullText(false);
   }, [popupOpen, selectedEvent]);
@@ -136,7 +140,7 @@ const Calendar = () => {
 
   return (
     <div className="w-[99vw] h-[120vh] flex flex-col justify-between items-center gap-5">
-      <h1 className="text-start w-full text-[2rem] font-bold pl-4 pt-3">Events Calendar</h1>
+      <h1 className="text-start w-full lg:text-[2rem] text-[1.4rem] font-bold pl-4 pt-3"><span><i className="fa-solid fa-arrow-left text-[1.1rem] mr-5 lg:text-[1.7rem] cursor-pointer" onClick={gotoMain}></i></span>Events Calendar</h1>
       <div className="w-[90%] h-[110vh] border border-gray-300 rounded-xl shadow-md overflow-hidden mb-4">
 
         {/* Header */}
@@ -208,7 +212,7 @@ const Calendar = () => {
 
 {popupOpen && (
   <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
-    <div className="bg-white w-[500px] max-h-[90vh] rounded-2xl shadow-2xl overflow-y-auto relative animate-fadeIn">
+    <div className="bg-white lg:w-[500px] w-[350px] max-h-[90vh] rounded-2xl shadow-2xl overflow-y-auto relative animate-fadeIn">
       
       {/* Close button */}
       <button
