@@ -15,7 +15,7 @@ const Landing_page = () => {
   };
 
   return (
-    <div className="h-[410vh] w-full flex flex-col justify-start items-start">
+    <div className="lg:h-[410vh] h-[220vh] w-full flex flex-col justify-start items-start">
       {/* navbar */}
 
       <div className="h-[10vh] bg-white w-full fixed top-[0px] z-50 flex items-center justify-between px-4">
@@ -220,7 +220,7 @@ const Landing_page = () => {
       {/* feature */}
       <section
         id="feature"
-        className="lg:h-[90vh] h-[30vh] bg-blue-300 w-full flex flex-row justify-center items-center"
+        className="lg:h-[90vh] h-[30vh] bg-blue-300 w-full flex flex-row justify-center items-center overflow-hidden"
       >
         <div className='w-[70%] h-[100%] bg-blue-300 flex flex-col items-end justify-center lg:gap-10 gap-4 bg-[url("/f_img.png")] bg-cover bg-center'>
           <div className="lg:w-[38%] w-[47%] lg:h-[10%] h-[10%] p-[5px] bg-white lg:mr-[20%] mr-[-4%] rounded-[30px] flex flex-row items-center justify-evenly">
@@ -256,10 +256,10 @@ const Landing_page = () => {
             <h1 className="font-bold lg:text-[1.2rem] text-[7px]">Cultural Calendar 📅</h1>
           </div>
         </div>
-        <div className="w-[20%] h-[100%]  flex flex-col justify-center items-center relative">
-          <div className='lg:w-[550px] lg:h-[550px] w-[100px] h-[100px] bg-[url("/earth.png")] bg-cover bg-top rounded-[50%]'></div>
-          <div className='lg:w-[550px] lg:h-[550px] w-[150px] h-[150px] bg-[url("/earth_people.png")] bg-cover bg-top left-[0%] lg:bottom-[0%] bottom-[10%]  absolute'></div>
-          <div className='lg:w-[250px] lg:h-[140px] bg-[url("/airplane.png")] bg-cover bg-center absolute right-[20%] bottom-[75%] rotate-22'></div>
+        <div className="w-[30%] h-[100%]  flex flex-col justify-center items-center relative">
+          <div className='lg:w-[550px] lg:h-[550px] w-[120px] h-[120px] bg-[url("/earth.png")] bg-cover bg-top rounded-[50%]'></div>
+          <div className='lg:w-[550px] lg:h-[550px] w-[150px] h-[150px] bg-[url("/earth_people.png")] bg-cover bg-top lg:left-[0%] left-[-20%] lg:bottom-[0%] bottom-[0%]  absolute'></div>
+          <div className='lg:w-[250px] lg:h-[140px] w-[100px] h-[70px] bg-[url("/airplane.png")] bg-cover bg-center absolute right-[20%] lg:bottom-[75%] bottom-[65%] rotate-22'></div>
         </div>
       </section>
 
@@ -267,53 +267,53 @@ const Landing_page = () => {
 
       <section
         id="map"
-        className="h-[90vh] bg-white w-full flex flex-row justify-center items-center "
+        className="lg:h-[90vh] h-[50vh] bg-white w-full flex flex-row justify-center items-center  overflow-hidden"
       >
         <div className="w-[80%] h-[90%] bg-white  flex flex-col justify-center items-center relative">
-          <div className='w-[550px] h-[550px] bg-[url("/sikkim_map.png")] bg-cover bg-top rounded-[50%]'></div>
+          <div className='lg:w-[550px] lg:h-[550px] w-[250px] h-[250px] bg-[url("/sikkim_map.png")] bg-cover bg-top rounded-[50%]'></div>
 
           {/* location pin card */}
-          <div className="w-[30%] h-[12%] bg-blue-300 absolute left-[2%] bottom-[60%] rounded-[5px] flex flex-row items-center justify-evenly">
-            <div className='w-[100px] h-[80%] bg-[url("/img1.jpg")] bg-cover bg-center rounded-[5px] border-[2px] border-white'></div>
+          <div className="lg:w-[30%] lg:h-[12%] w-[60%] h-[10%] bg-blue-300 absolute lg:left-[2%] lg:bottom-[60%] bottom-[70%] left-[-10%] rounded-[5px] flex flex-row items-center justify-evenly">
+            <div className='lg:w-[100px] lg:h-[80%] w-[40px] h-[80%] bg-[url("/img1.jpg")] bg-cover bg-center rounded-[5px] border-[2px] border-white'></div>
             <div className="w-[65%] h-[90%]  flex flex-col justify-evenly">
-              <h1 className="text-[1.2rem] font-bold">Rumtek Monastery</h1>
-              <p className="text-[12px]">📍 Location: Gangtok, East Sikkim</p>
+              <h1 className="lg:text-[1.2rem] text-[10px] font-bold">Rumtek Monastery</h1>
+              <p className="lg:text-[12px] text-[8px]">📍 Location: Gangtok, East Sikkim</p>
             </div>
           </div>
-          <div className="w-[30%] h-[12%] bg-blue-300 absolute left-[10%] bottom-[15%] rounded-[5px] flex flex-row items-center justify-evenly">
-            <div className='w-[100px] h-[80%] bg-[url("/img1.jpg")] bg-cover bg-center rounded-[5px] border-[2px] border-white'></div>
+          <div className="lg:w-[30%] lg:h-[12%] w-[60%] h-[10%] bg-blue-300 absolute lg:left-[10%] lg:bottom-[15%] left-[-5%] bottom-[10%] rounded-[5px] flex flex-row items-center justify-evenly">
+            <div className='lg:w-[100px] lg:h-[80%] w-[40px] h-[80%] bg-[url("/img1.jpg")] bg-cover bg-center rounded-[5px] border-[2px] border-white'></div>
             <div className="w-[65%] h-[90%]  flex flex-col justify-evenly">
-              <h1 className="text-[1.2rem] font-bold">Enchey Monastery</h1>
-              <p className="text-[12px]">📍 Location: Gangtok, East Sikkim</p>
+              <h1 className="lg:text-[1.2rem] text-[10px] font-bold">Enchey Monastery</h1>
+              <p className="lg:text-[12px] text-[8px]">📍 Location: Gangtok, East Sikkim</p>
             </div>
           </div>
-          <div className="w-[30%] h-[12%] bg-blue-300 absolute right-[5%] top-[24%] rounded-[5px] flex flex-row items-center justify-evenly">
-            <div className='w-[100px] h-[80%] bg-[url("/img1.jpg")] bg-cover bg-center rounded-[5px] border-[2px] border-white'></div>
+          <div className="lg:w-[30%] lg:h-[12%] w-[60%] h-[10%] bg-blue-300 absolute lg:right-[5%] lg:top-[24%]  top-[25%] right-[-20%] rounded-[5px] flex flex-row items-center justify-evenly">
+            <div className='lg:w-[100px] lg:h-[80%] w-[40px] h-[80%] bg-[url("/img1.jpg")] bg-cover bg-center rounded-[5px] border-[2px] border-white'></div>
             <div className="w-[65%] h-[90%]  flex flex-col">
-              <h1 className="text-[1.2rem] font-bold mb-0 mt-1">
+              <h1 className="lg:text-[1.2rem] text-[10px] font-bold mb-0 mt-1">
                 Pemayangtse Monastery
               </h1>
-              <p className="text-[12px]">📍 Location: Pelling, West Sikkim</p>
+              <p className="lg:text-[12px] text-[8px]">📍 Location: Pelling, West Sikkim</p>
             </div>
           </div>
-          <div className="w-[30%] h-[12%] bg-blue-300 absolute right-[10%] bottom-[20%] rounded-[5px] flex felx-row items-center justify-evenly">
-            <div className='w-[100px] h-[80%] bg-[url("/img1.jpg")] bg-cover bg-center rounded-[5px] border-[2px] border-white'></div>
+          <div className="lg:w-[30%] lg:h-[12%] w-[65%] h-[10%] bg-blue-300 absolute lg:right-[10%] lg:bottom-[20%] right-[-15%] bottom-[25%] rounded-[5px] flex felx-row items-center justify-evenly">
+            <div className='lg:w-[100px] lg:h-[80%] w-[40px] h-[80%] bg-[url("/img1.jpg")] bg-cover bg-center rounded-[5px] border-[2px] border-white'></div>
             <div className="w-[65%] h-[90%]  flex flex-col justify-evenly">
-              <h1 className="text-[1.2rem] font-bold mb-0 mt-1">
+              <h1 className="lg:text-[1.2rem] text-[10px] font-bold mb-0 mt-1">
                 {" "}
                 Tashiding Monastery
               </h1>
-              <p className="text-[12px]">
+              <p className="lg:text-[12px] text-[7px]">
                 📍 Location: Near Yuksom, West Sikkim
               </p>
             </div>
           </div>
 
           {/* airplane */}
-          <div className='w-[250px] h-[140px] bg-[url("/airplane.png")] bg-cover bg-center absolute right-[40%] bottom-[65%]'></div>
+          <div className='lg:w-[250px] lg:h-[140px] w-[100px] h-[70px] bg-[url("/airplane.png")] bg-cover bg-center absolute right-[40%] lg:bottom-[65%] bottom-[60%]'></div>
         </div>
 
-        <div className="w-[20%] h-[90%] bg-blue-300 rounded-[10px] flex flex-col items-center justify-center gap-4">
+        <div className="hidden lg:w-[20%] lg:h-[90%] bg-blue-300 rounded-[10px] lg:flex flex-col items-center justify-center gap-4">
           <h1 className="text-[1.7rem] font-bold ">Famous Monasteries</h1>
 
           <div className="w-[90%] h-[10%] bg-white flex flex-row items-center justify-evenly rounded-[10px]">
@@ -381,20 +381,21 @@ const Landing_page = () => {
       </section>
 
       {/* footer */}
-      <section
+       <section
         id="footer"
         className="h-[50vh] bg-blue-300 w-full flex flex-row items-center justify-evenly"
       >
         <div className="w-[30%] h-[90%]  flex flex-col items-start justify-center gap-6">
           <div className="w-[90%] h-[30%]  flex flex-row items-center justify-start bg-blue-300 gap-6">
-            <div className='w-[15%] h-[90%] bg-[url("/re_logo.png")] bg-cover bg-center'></div>
+           <div className="hidden lg:block lg:w-[15%] lg:h-[90%] lg:bg-[url('/re_logo.png')] bg-cover bg-center"></div>
+
             <div>
-              <h1 className="text-[1.7rem] font-bold">CultureLens</h1>
-              <p>About Sikkim monasteries</p>
+              <h1 className="lg:text-[1.7rem] text-[1rem] font-bold">CultureLens</h1>
+              <p className="lg:text-[1rem] text-[14px]">About Sikkim monasteries</p>
             </div>
           </div>
           <div>
-            <p className="text-[1.1rem]">
+            <p className="lg:text-[1.1rem] text-[10px]">
               CultureLens is an app that lets you explore Sikkim’s monasteries
               from anywhere. It has 360° virtual tours, audio guides, an
               interactive map, digital archives, and a cultural calendar. This
@@ -406,40 +407,34 @@ const Landing_page = () => {
 
         {/* websites */}
         <div className="w-[5%] h-[90%]  flex flex-col items-center justify-evenly">
-          <i className="text-[1.7rem] fa-brands fa-facebook"></i>
-          <i className="text-[1.7rem] fa-brands fa-youtube"></i>
-          <i className="text-[1.7rem] fa-brands fa-google"></i>
-          <i className="text-[1.7rem] fa-brands fa-instagram"></i>
-          <i className="text-[1.7rem] fa-brands fa-twitter"></i>
+          <i className="lg:text-[1.7rem] text-[1rem] fa-brands fa-facebook"></i>
+          <i className="lg:text-[1.7rem] text-[1rem] fa-brands fa-youtube"></i>
+          <i className="lg:text-[1.7rem] text-[1rem] fa-brands fa-google"></i>
+          <i className="lg:text-[1.7rem] text-[1rem] fa-brands fa-instagram"></i>
+          <i className="lg:text-[1.7rem] text-[1rem] fa-brands fa-twitter"></i>
         </div>
 
         {/* Links */}
-        <div className="w-[20%] h-[90%]  flex flex-col items-start justify-evenly">
+        <div className="lg:w-[20%] lg:h-[70%]  lg:flex flex-col items-start justify-evenly hidden">
           <h1 className="w-full text-center text-[1.7rem] font-bold">
             CultureLens
           </h1>
           <ul className="w-full h-[70%] list-none  text-[1.2rem] flex flex-col items-start justify-evenly">
             <li className="w-full cursor-pointer text-center">
-              <a href="">Home</a>
+              <a href="#home">Home</a>
             </li>
             <li className="w-full cursor-pointer text-center">
-              <a href="">About Application</a>
+              <a href="#scanner">Scanner</a>
             </li>
             <li className="w-full cursor-pointer text-center">
-              <a href="">Feature</a>
+              <a href="#calture">Caltural Calendar</a>
             </li>
             <li className="w-full cursor-pointer text-center">
-              <a href="">Sikkim map</a>
-            </li>
-            <li className="w-full cursor-pointer text-center">
-              <a href="">Contact us</a>
-            </li>
-            <li className="w-full cursor-pointer text-center">
-              <a href="">Terms & Conditions</a>
+              <a href="footer">Contact Us</a>
             </li>
           </ul>
         </div>
-        <div className="w-[40%] h-[90%]  flex flex-col items-center justify-evenly">
+        <div className="lg:w-[40%] w-[50%] h-[90%]  flex flex-col items-center justify-evenly">
           <div className="w-[90%] h-[25%] flex flex-col items-start justify-center">
             <label htmlFor="" className="text-[1.2rem]">
               Email
@@ -464,7 +459,7 @@ const Landing_page = () => {
               id=""
             ></textarea>
           </div>
-          <button className="w-[90%] h-[15%] bg-yellow-300 cursor-pointer rounded-[5px] text-[1.1rem]">
+          <button className="w-[90%] lg:h-[15%] h-[10%] bg-yellow-300 cursor-pointer rounded-[5px] lg:text-[1.1rem] text-[13px]">
             Submit Feedback
           </button>
         </div>
